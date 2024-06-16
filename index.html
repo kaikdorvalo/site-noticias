@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title-ibge">Portal de notícias o IBGE</h1>
+        <div class="container-input-filter">
+            <form class="input">
+                <input id="search-input" type="text" class="search-input" placeholder="Buscar notícias por termo">
+                <button id="btn-search" class="search-icon">🔍</button>
+            </form>
+            <div>
+                <div class="container-filter">
+                    <div id="filter" class="svg">
+                        <svg width="20" height="20" fill="#f0f0f0" viewBox="0 0 80 90" focusable="false"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+                        </svg>
+
+                        <div class="filter-counter">
+                            <div id="counter-filter" class="counter-number">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-content">
+            <ul id="list" class="list">
+            </ul>
+
+            <ul id="pagination-list" class="pagination-list">
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">&copy; Prova do segundo bimestre - Programação WEB</footer>
+
+
+
+
+    <dialog id="filter-modal" class="filter-dialog">
+        <div class="dialog-close">
+            <button id="filter-close" class="close-btn">X</button>
+        </div>
+        <div>
+            <form id="filter-form" class="form-dialog-filter">
+                <div class="dialog-input-container">
+                    <label for="select-type" class="dialog-label">Tipo:</label>
+                    <select id="select-type" name="select" class="dialog-select-filter">
+                        <option class="option" value="" selected disabled>Select</option>
+                        <option class="option" value="noticia">Notícia</option>
+                        <option class="option" value="release">Release</option>
+                    </select>
+                </div>
+                <div class="dialog-input-container">
+                    <label for="select-quantity" class="dialog-label">Quantidade:</label>
+                    <select id="select-quantity" name="select" class="dialog-select-filter">
+                        <option class="option" value="5" selected>5</option>
+                        <option class="option" value="10">10</option>
+                        <option class="option" value="15">15</option>
+                    </select>
+                </div>
+                <div class="dialog-input-container">
+                    <label for="dialog-filter-start-date" class="dialog-label">De: </label>
+                    <input id="dialog-filter-start-date" type="date" class="date-input-filter">
+                </div>
+                <div class="dialog-input-container">
+                    <label for="dialog-filter-end-date" class="dialog-label">Até: </label>
+                    <input id="dialog-filter-end-date" type="date" class="date-input-filter">
+                </div>
+                <button id="filter-submit" class="dialog-filter-button" type="submit">Aplicar</button>
+            </form>
+        </div>
+    </dialog>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
