@@ -155,8 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const pData = document.createElement('p');
 
-
-            const publiDate = new Date(item.data_publicacao);
+            const splittedDate = item.data_publicacao.split(" ")[0].split("/")
+            console.log(splittedDate)
+            const publiDate = new Date(`${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`);
+            console.log(publiDate)
             const dateNow = new Date();
 
             const ms = dateNow - new Date(publiDate);
